@@ -1,0 +1,208 @@
+*{margin: 0; padding: 0; box-sizing: border-box; }
+html, body{
+    width: 100%;
+    min-height: 100%;
+    background-color: purple;
+    font-size: 62.5%;
+}
+#main{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+#mainheading{
+    display: flex;
+    width: 100%;
+    height: auto;
+    overflow: wrap;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: greenyellow;
+    margin-bottom: 1rem;
+}
+#main_input{width: 94%; height: auto; display: flex; justify-content: space-between; flex-wrap: wrap; overflow: wrap;}
+ #uinput{ 
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2.1rem;
+    margin-bottom: 0.5rem;
+    color: orange;
+}
+#uinput input{
+    border: none;
+    outline: none;
+    padding: 0.6rem;
+    margin-right: 0.8rem;
+    border-radius: 0.5rem;
+}
+#uinput input:focus{
+    padding-right: 2rem;
+    padding: 0.8rem;
+}
+#search_div{
+    font-size: 2.1rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    position: relative;
+}
+
+#submit{cursor: pointer; padding: 0.5rem; border-radius: 0.5rem;}
+
+#search{
+    border: none;
+    padding: 0.2rem;
+    margin-right: 0.6rem;
+    border-radius: 1.5rem;
+    padding-left: 2rem;
+    font-size: 2rem;
+    display: none;
+}
+#search:focus{
+    border: 0.02rem solid blue;
+    outline: none;
+    padding: 0.3rem;
+    padding-left: 2.7rem;
+}
+#search_btn{
+    width: 2.7rem;
+    height: 2.7rem;
+    font-size: 2.7rem;
+    color: blue;
+    border-radius: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: chartreuse;
+    
+}
+#search_btn:hover{cursor: pointer; font-size: 3rem;}
+#search_icon{color: orange; }
+
+#tabledatas{
+    width: 100%;
+    margin-top: 2rem;
+}
+.heading2{
+    font-size: 2rem;
+    color: greenyellow;
+    padding: 0.6rem;
+    margin-bottom: 0.2rem;
+
+}
+.error_msg{
+    color: red;
+    background-color: silver;
+    font-size: 2rem;
+    height: 3rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.3rem;
+    border-radius: 1.3rem;
+    display: none;
+    padding-right: 1rem;
+}
+.success_msg{
+    color:blue;
+    background-color: silver;
+    font-size: 2rem;
+    height: 3rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.3rem;
+    border-radius: 1.3rem;
+    display: none;
+    padding-right: 1rem;
+}
+#tables{
+    width: 100%;
+    height: 100%;
+    margin-top: 0.6rem;
+    font-size: 2rem;
+}
+#table{
+    width: 100%;
+    background-color: grey;
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#thead{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+#tbody{
+    width: 100%;
+    height: auto;
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+#delete_btn{cursor: pointer;}
+#edit_btn{cursor: pointer;}
+
+#modal_box{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#modal{
+    width: 40%;
+    height: 40%;
+    border-radius: 1rem;
+    position: relative;
+    top: calc(50% - 20%);
+    left: calc(50% - 20%);
+    font-size: 2.5rem;
+    border: 0.5rem solid purple;
+    background-color: salmon;
+    text-align: center;
+    line-height: 7rem;
+    
+}
+#modal input{
+    border: none;
+    padding: 1em;
+    border-radius: 0.5rem;
+    /* font-size: 0.5em; */
+
+    
+}
+#close_modal{
+    font-size: 4rem;
+    color: red;
+    font-weight: bold;
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    cursor: pointer;
+    background-color: rosybrown;
+    border-radius: 50%;
+    
+}
+#pagination{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;  
+}
+#pagination a{
+    background-color: teal;
+    border: 0.2rem solid blue;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;padding: 0.3rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+}
+.active{
+    background-color: blue;
+    color: black;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    border: 0.2rem solid orange;
+}

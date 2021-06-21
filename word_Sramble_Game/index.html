@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section>
+		<div class="heading"><h1>Welcome To Word Scramble Game:</h1></div>
+	
+	<div class="gameArea">
+		<h2 class="msg" id="msg"></h2>
+		<input type="textarea" name="" class="hidden" id="textarea">
+		<button  class="btn" id="btn">Play Game</button>
+	</section>
+	</div>         			
+</body>
+<script>
+		
+		const msg = document.getElementById('msg');
+		const textArea = document.querySelector('input');
+		const bt_btn = document.getElementById('btn');
+		let player = false;
+		let newWords = "";
+		let randWords = "";
+		let arr = ["python","ruby","php","html","javascript","nodejs","reactjs","c++","java",".net","android","css"]
+
+		function randGame () {
+				let rand = Math.floor(Math.random()*arr.length);
+				// console.log(rand);
+				let rtrn = arr[rand];
+				// console.log(rtrn);
+				return rtrn;
+			}
+
+			const wordScram = (e) => {
+				for (i = e.length-1; i>0; i--) {
+					// console.log(i);
+					let temp = e[i];
+					// console.log(temp);
+					let j = Math.floor(Math.random()*(i+1));
+					// console.log(i);
+						// console.log(j);
+						e[i] = e[j];
+						e[j] = temp;
+						
+				}
+				return e;
+
+			}
+
+        console.log('hey');
+		bt_btn.addEventListener("click" , function() {
+			console.log("Ready!");
+			if (!player){
+				player = true;
+				bt_btn.innerHTML = "Guess";
+				textArea.classList.toggle('hidden');
+				newWords = randGame();
+				console.log(newWords);
+				randWords = wordScram(newWords.split("")).join();
+				console.log(randWords);
+				msg.innerHTML = randWords;
+			}else {
+				let typeWord = textArea.value;
+				console.log(textArea.value);
+				if (typeWord === newWords){
+					player = false;
+					msg.innerHTML = `You are correct. That's ${newWords}. Play Again`;
+					bt_btn.innerHTML = "Play Again";
+					textArea.classList.toggle('hidden');
+					textArea.value = "";
+
+				}else {
+					msg.innerHTML = `Incorrect word. Guess Again ${randWords}.`;
+				}
+			}
+		})
+
+		</script>
+</html>
