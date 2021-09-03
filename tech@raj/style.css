@@ -1,0 +1,594 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+html body{
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    /* background-color: hsl(352, 20%, 22%); */
+    background-color: darkslategray;
+    
+}
+#loader{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+#loader img{width: 100%; height: 100%; background-color: darkslategray;}
+#main{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(red, green, blue); */
+    overflow: hidden;
+    position: relative;
+    top: 2rem;
+    /* z-index: 100; */
+    display: none;
+}
+#profileBox{
+    width: 100%;
+    height: 100%;
+    /* padding-top: 2rem; */
+
+}
+.profile_section{
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    /* background-color: rosybrown; */
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    /* padding-top: 2rem; */
+
+}
+.profile_section img{
+    width: 100%;
+    height: 15rem;
+    background-size: cover;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    /* padding-top: 2rem; */
+}
+.photoWithTitle{
+    position: absolute;
+    left: 1rem;
+    bottom: 2rem;
+    width: 100%;
+    /* padding-top: 2rem; */
+}
+.photoWithTitle img{
+    background-size: cover;
+    background-position: center;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    border: 0.1rem solid blue;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    
+    -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    -moz-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    -ms-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    -o-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+    padding: 0;
+    transform: scale(1.1);
+}
+
+.photoWithTitle h4{
+    width: 100%;
+    color: blue;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+.photoWithTitle p{
+    width: 100%;
+    height: 100%;
+    color: blue;
+    font-weight: 400;
+    font-size: 1.4rem;
+    position: relative;
+}
+#slide{
+    position: relative;
+    top: -1.5rem;
+    right: -3.7rem;
+    width: 15rem;
+    height: 1.5rem;
+    /* animation: tslide 3s steps(2) infinite; */
+    /* margin-right: 0.5rem; */
+}
+
+
+#beforeAfter{
+    width: 15.5rem;
+    height: 1.5rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0.3rem;
+    animation: tslide 2.5s steps(2) infinite;    
+}
+
+@keyframes tslide{
+    100% {top: -2.8rem; overflow: visible;}
+}
+#slide #beforeAfter::before{
+    content: "Programmer";
+    width: 100%;
+    height: 1.3rem;
+    color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.3rem;
+    border-right: 0.1rem solid gold;
+    animation: slide 3s linear infinite;
+    -webkit-animation: slide 2.5s linear infinite;
+    -moz-animation: slide 2.5s linear infinite;
+    -ms-animation: slide 2.5s linear infinite;
+    -o-animation: slide 2.5s linear infinite;
+    overflow: hidden;
+    /* background-color: orange; */
+    border-radius: 1rem;
+    font-weight: 900;
+    /* animation: tslide 3.1s steps(2) infinite; */
+}
+
+
+@keyframes slide {
+    0% {width: 50%;}
+    50% {width: 0%; border: none;}
+    /* 90% {width: 0%; top: -4rem;} */
+    100% {width: 0%; border: none;}
+}
+
+#slide #beforeAfter::after{
+    content: "Web Developer";
+    width: 100%;
+    height: 1.3rem;
+    color: orange;
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    font-size: 1.1rem;
+    animation: sAnimation 2.5s linear infinite;
+    overflow: hidden;
+    border-right: 0.1rem solid gold;
+    border-radius: 1rem;
+    /* animation: tsslide 3.1s steps(2) infinite; */
+    
+}
+@keyframes sAnimation {
+    0% {width: 47%;}
+    50% {width: 0%;}
+    75% {width: 49%;}
+    100% {width: 49%;}
+}
+@keyframes tsslide{
+    100% {top: -1rem;}
+}
+
+#middle{
+    width: 100%;
+    height: 16rem;
+    /* background-color: rgba(50, 50, 93, 0.25); */
+    /* position: relative; */
+    /* background-color: hsl(352, 20%, 22%); */
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#left{
+    /* position: absolute;
+    left: 1rem;
+    top: 1rem; */
+    font-size: 1.1rem;
+    color: snow;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 2rem;
+    /* float: left; */
+    margin-right: 1rem;
+}
+@media (max-width:414px) {
+    #middle{width: 100%; display: block;}
+    #left{width: 100%; display: flex; flex-wrap: wrap; justify-content: center;}
+    #right{width: 100%; display: flex; flex-wrap: wrap; justify-content: center;}
+    #left a{width: 75%;}
+    #right a{width: 75%;}
+}
+#left a{
+    margin-bottom: 1rem;
+    border-bottom: 0.01rem solid fuchsia;
+    border-top: 0.01rem solid fuchsia;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    color: orange;
+}
+#right{
+    /* position: absolute;
+    right: 1rem;
+    top: 1rem; */
+    font-size: 1.1rem;
+    color: snow;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 2rem;
+    /* float: right; */
+    /* margin-left: 1.5rem; */
+}
+#right a{
+    background-color: darkorange;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    color: snow;
+    text-decoration: none;
+    display: block;
+}
+
+ #center{
+    width: 100%;
+    height: 4rem;
+    display: grid;
+    place-items: center;
+    /* transform: translate(-50%); */
+    clip-path: polygon(50% 1%, 76% 55%, 51% 100%, 25% 56%);
+    background-color:hsl(302, 100%, 76%);
+    /* margin-bottom: 1rem; */
+    /* margin-top: 2rem; */
+}
+#btnArea{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 30%;
+    background-color: black;
+    position: relative;
+    text-align: center;
+    top: -0.3rem;
+}
+#btnArea a{
+    width: 0.7rem;
+    height: 0.7rem;
+    position: absolute;
+    top: 0;
+    left: 0.1rem;
+    border-radius: 50%;
+    padding: 1.4rem;
+    background-color: red;
+    color: snow;
+    font-size: 1rem;
+    text-decoration: none;
+}
+#btnArea a p{
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    bottom: 0.6rem;
+    right: 0.6rem;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+#body{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.7rem;
+}
+#showPopup{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 80%;
+    height: 25rem;
+    transform: translateX(-50%);
+    background-color: darkgreen;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    display: none;
+    z-index: 300;
+}
+.close{
+    position: absolute;
+    top: -0.8rem;
+    right: -1rem;
+    color: coral;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 60%;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: 2100;
+    background-color: black;
+    text-align: center;
+    line-height: 0.5;
+    z-index: 301;
+    
+}
+#select{
+    width: auto;
+    height: 100%;
+    place-content: center;
+    /* padding-left: 5rem; */
+    padding-top: 10rem;
+    font-size: 1.2rem;
+    /* transform: translate(30%); */
+    display: none;
+    z-index: 301;
+    text-align: center;
+}
+#select input{
+    width: 12rem;
+    color: snow;
+    background-color: teal;
+    padding: 0.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#select #addProfile{
+    width: 5rem;
+    background-color: thistle;
+    cursor: pointer;
+    color: teal;
+}
+#searchPopup{
+    position: absolute;
+    top: 1.5%;
+    left: 50%;
+    width: 92%;
+    height: auto;
+    transform: translateX(-50%);
+    background-color: rgba(143, 133, 122, 0.5); 
+color: rgba(143, 133, 122, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    display: none;
+    z-index: 300;
+}
+#close{
+    position: absolute;
+    top: -0.8rem;
+    right: -1rem;
+    color: coral;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 60%;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: 2100;
+    background-color: black;
+    text-align: center;
+    line-height: 0.5;
+    z-index: 301;
+    
+}
+#search_div{
+    font-size: 1.5rem;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+#search{
+    border: none;
+    padding: 0.2rem;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+	width: 80%;
+	margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.searchBtn{
+    font-size: 1.3rem;
+    background-color: springgreen;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    margin-left: 0.8rem;
+    padding: 0.3rem;
+}
+#search:focus{
+    border: 0.02rem solid blue;
+    outline: none;
+    padding: 0.3rem;
+    
+}
+#search_btn{
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1.7rem;
+    border-radius: 2rem;
+    background-color: white;
+    z-index: 2;
+	
+}
+#search_btn:hover{cursor: pointer; font-size: 2.2rem;}
+#search_icon{color: orange; }
+#searchMain{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+#searchBody{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    /* background-color: darkorchid; */
+    overflow-x: scroll;
+    display: flex;
+    margin-top: 0.5rem;
+    color: springgreen;
+}
+#searchBody::-webkit-scrollbar{overflow: hidden;}
+#searchBody::-ms-scrollbar{overflow: hidden;}
+#searchBody::-moz-scrollbar{overflow: hidden;}
+#searchBody::-o-scrollbar{overflow: hidden;}
+
+#searchMain h3{border-bottom: 0.1rem solid springgreen; color: springgreen; font-size: 1.4rem;}
+
+#heading{
+    width: 100%;
+    height: auto;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding-top: 8rem;
+    text-align: center;
+    color: deeppink;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.myProjects{
+    width: 100%;
+    height: 25rem;
+    text-align: center;
+    /* background-color: darkorchid; */
+    font-size: 1.2rem;
+    overflow-x: scroll;
+    display: flex;
+    margin-top: 0.5rem;
+}
+#myProjects::-webkit-scrollbar{overflow: hidden;}
+#myProjects::-ms-scrollbar{overflow: hidden;}
+#myProjects::-moz-scrollbar{overflow: hidden;}
+#myProjects::-o-scrollbar{overflow: hidden;}
+/* #projectSection{
+    color: fuchsia;
+    text-align: center;
+    font-size: 1.3rem;    
+} */
+.project{
+    min-width: 15rem;
+    height: 100%;
+    /* background-color: deepskyblue; */
+    border: 0.3rem solid fuchsia;
+    margin-right: 2rem;
+    background-size: cover;
+    color: fuchsia;
+    text-align: center;
+    font-size: 1.3rem;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: 0.5rem;
+}
+.description{
+    width: 100%;
+    max-height: 55%;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    overflow-y: scroll;
+    text-align: center;
+    margin-top: 0.5rem;
+    border-top: 0.1rem solid deeppink;
+}
+.description::-webkit-scrollbar{overflow: hidden;}
+
+.buttons{
+    width: 100%;
+    text-align: center;
+    height: auto;
+    position: absolute;
+    bottom: 0.8rem;
+}
+.buttons a{
+    background-color: deeppink;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    margin-top: 1rem;
+    text-decoration: none;
+    margin-right: 0.6rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    
+}
+
+#mainslideNav{
+    width: 100%;
+    height: 35rem;
+    padding-top: 2rem;
+    /* padding-top: 4rem; */
+    /* background-color: fuchsia; */
+    /* margin-bottom: 4rem; */
+}
+#slideNav{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5rem; 
+    margin-top: 2rem;
+}
+.active{border-bottom: 0.2rem solid deeppink;}
+.inneractive{display: block;}
+#slideNav button{
+    font-size: 1.3rem;
+    background-color: blueviolet;
+    color: deeppink;
+    border-radius: 0.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+#slideSection{
+    width: 100%;
+    height: auto;
+    /* background-color: deeppink; */
+    position: relative;
+}
+#about{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: pink;
+    /* padding-bottom: 1rem;    */
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    padding-bottom: 1rem;
+}
+.abtcenter{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+}
+.mabt{font-size: 1.4rem; color: blue;}
+#services{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    background-color: antiquewhite;
+    top: 0;
+    left: 0;
+    display: none;
+    /* padding-bottom: 1rem; */
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    padding-bottom: 1rem;
+}
+.servcenter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.mcenter{
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    /* line-height: 1.5rem; */
+    /* transform: translateY(calc(100% - 75%)); */
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 0.8rem;
+    
+}
+/* #footerSection{
+    width: 100%;
+    height: 5rem;
+} */
