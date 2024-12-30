@@ -1,2 +1,2 @@
 ### myprojects:
-This repository is for `PHP` and `Javascript` based `websites`
+This repository is for `Core PHP` and `Javascript` based `modules`
